@@ -11,7 +11,6 @@ def consolidate_cart(cart)
     else
       final_hash[element_name] = element_stats
       final_hash[:count] = 1
-    binding.pry  
     end
   end
   final_hash
