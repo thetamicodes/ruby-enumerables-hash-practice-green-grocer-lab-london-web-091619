@@ -19,7 +19,13 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  binding.pry
+  coupons.each do |coupon|
+  item = coupon[:item]
+  if cart[item] && coupon[:item][:count] >= coupon[:num] && cart["#{item} W/COUPON"]
+    cart["#{item} W/COUPON"] = {price: coupon[:cost] / coupon[:num], clearance: cart[item][:clearance], count: coupon[:num]}
+      cart[item][:count] -= coupon[:num]
+  elsif 
+  end
 end
 
 def apply_clearance(cart)
