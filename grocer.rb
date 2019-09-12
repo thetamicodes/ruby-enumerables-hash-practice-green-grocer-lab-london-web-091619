@@ -1,5 +1,12 @@
 def consolidate_cart(cart)
-  # code here
+
+  cart_hash = Hash[cart.collect { |item| [item, '']}]
+  cart_hash[:count] = number 
+  
+  number = cart_hash.count(item)
+
+  return cart_hash
+  
 end
 
 def apply_coupons(cart, coupons)
@@ -13,3 +20,5 @@ end
 def checkout(cart, coupons)
   # code here
 end
+
+
