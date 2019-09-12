@@ -1,12 +1,10 @@
+require 'pry'
+
 def consolidate_cart(cart)
-
-  cart_hash = Hash[cart.collect { |item| [item, '']}]
-  cart_hash[:count] = number 
-  
-  number = cart_hash.count(item)
-
-  return cart_hash
-  
+  final_hash = {}
+  cart.each do |element_hash|
+    binding.pry
+  end
 end
 
 def apply_coupons(cart, coupons)
